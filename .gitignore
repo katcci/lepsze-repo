@@ -1,0 +1,8 @@
+# list of files that we do NOT want in our github repository
+
+# locally installed python dependencies
+venv/
+.venv
+
+# sqlite database
+db.sqlite3

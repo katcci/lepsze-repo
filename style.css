@@ -1,0 +1,27 @@
+h1, h2, h3 {
+    color: red;
+}
+.headers {
+ color:aquamarine;
+ font-size: 300%;
+ padding: 20px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.left-column {
+    float: left;
+    width: 20%;
+    background-color: rosybrown; 
+}
+
+.right-column {
+    float: right;
+    width: 80%;
+    background-color: gray;
+}
+img {
+    width: 300px;
+}

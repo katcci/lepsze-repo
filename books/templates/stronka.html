@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Strona główna <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://google.pl">Google</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="form.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Formularz
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <div>
+            {% if user.is_authenticated %}
+            Witaj {{user}}!
+            {% else %}
+            nieznany user
+            {% endif %}
+
+          </div>
+        </div>
+      </nav>
+      <div class="row">
+          <div class="col-8">
+        <div class="left-column">
+            <h3>Menu</h3>
+            <ul>
+                <li>
+                    <a href="stronka.html">Strona główna</a>
+                </li>
+                <li>
+                    <a href="form.html">Formularz</a>
+                </li>
+            </ul>
+        </div>
+    <div class="right-column">
+        <h1 class="headers bold">Tytuł 1</h1>
+        <h2>Tytuł 2</h2>
+        <h3>Tytuł 3</h3>
+
+        <h5 class="headers bold">Lista zakupów Ibisza</h5>
+    <ol>
+        <li>chleb</li>
+        <li>ser</li>
+        <li>jajka</li>
+    </ol>
+    <div class="alert alert-warning" role="alert">
+        A simple warning alert—check it out!
+      </div>
+      <button type="button" class="btn btn-success">Success</button>
+   <p>My <u class="bold">cat</u> is very grumpy</p>
+   <p>To jest przykładowy <span>tekst w span</span></p>
+   <p>To jest przykładowy <div>tekst w div</div></p>
+   <a href="https:support.microsoft.com">Kliknij mnie!</a>
+   <img src="nie.jpg" title="a tu co się stało?">
+   <img src="krecik.jpg" title="Dzik w naturalnym środowisku"></body>
+   <meta charset="iso-8859-1">
+   <p>Japanese example: ご飯が熱い。</p><p>Polish example: łażący różowo-żółty</p>
+</div>
+</div>
+</div>
+{% endblock content %}
