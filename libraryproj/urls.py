@@ -23,6 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #path('hello-world/', ...),
     #http://127.0.0.1:8000/books
-    path('books/', books_list),
+    path('books/', books_list, name="books_list"),
     #path('authors/', ...),
 ]
