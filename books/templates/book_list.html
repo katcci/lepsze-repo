@@ -1,17 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Lista książek</h1>
-    
+<h1><i class="fas fa-book"></i>Lista książek</h1>
+<div class="container">
+  <div class="row">
     {% for book in books %}
-         {{book.title}} <br>
-         <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">{{ book.title }}</h5>
-              <p class="card-text">{{ book.short_description }}</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-    {% endfor %}
-
+<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3"> 
+    <div class="card">
+        {% if book.cover %}        
+        <img src="{{ book.cover.url }}" class="card-img-top">        
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title">{{ book.title }}</h5>
+            <p class="card-text">{{ book.short_description }}</p>
+            <a href="{% url 'book_details' book.id %}" class="btn btn-primary">Przejdź do opisu</a>
+        </div>
+    </div>
+</div>
+{% endfor %}
+</div>
 {% endblock content %}

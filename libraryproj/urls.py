@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
-from books.views import books_list, stronka 
+from books.views import books_list, book_details, stronka 
 
 urlpatterns = [
     path('', stronka),
@@ -25,4 +27,6 @@ urlpatterns = [
     #http://127.0.0.1:8000/books
     path('books/', books_list, name="books_list"),
     #path('authors/', ...),
-]
+    path('books/<int:book_id>', book_details, name="book_details"),
+    
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

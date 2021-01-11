@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {& load static %}
+{% load static %}
 {% block content %}
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -67,9 +68,11 @@
    <p>My <u class="bold">cat</u> is very grumpy</p>
    <p>To jest przykładowy <span>tekst w span</span></p>
    <p>To jest przykładowy <div>tekst w div</div></p>
-   <a href="https:support.microsoft.com">Kliknij mnie!</a>
-   <img src="nie.jpg" title="a tu co się stało?">
-   <img src="krecik.jpg" title="Dzik w naturalnym środowisku"></body>
+   <a href="https:support.microsoft.com">
+    <i class="fas fa-user"></i>
+    Kliknij mnie!</a>
+   <img src="{% static 'images/nie.jpg' %}" title="a tu co się stało?">
+   <img src="{% static 'images/krecik.jpg' %}" title="Dzik w naturalnym środowisku"></body>
    <meta charset="iso-8859-1">
    <p>Japanese example: ご飯が熱い。</p><p>Polish example: łażący różowo-żółty</p>
 </div>
